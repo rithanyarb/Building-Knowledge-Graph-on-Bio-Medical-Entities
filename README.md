@@ -3,7 +3,10 @@
 
 ## What is a Knowledge Graph?
 A Knowledge graph, also known as a semantic network, represents a network of real-world entities—i.e. objects, events or concepts—and illustrates the relationship between them.
-**NLP** - Natural Language Processing
+
+**NLP** - Natural Language Processing 
+
+***A Branch of artificial intelligence that focuses on helping computers to understand the way that humans write and speak***
 
 ### Using Neo4j
 Neo4j is used to represent data in a graphical model.
