@@ -10,4 +10,4 @@ Neo4j is used to represent data in a graphical model.
 
 ***Example***
 
-<img width="150" alt="kg" src="https://github.com/rithanyarb/Building-Knowledge-Graph-on-Bio-Medical-Entities/assets/127092743/6638649d-fbc0-4304-9783-87fa38f3c183">
+<img width="207" alt="kg" src="https://github.com/rithanyarb/Building-Knowledge-Graph-on-Bio-Medical-Entities/assets/127092743/6638649d-fbc0-4304-9783-87fa38f3c183">
