@@ -1,4 +1,5 @@
 # Building-Knowledge-Graph-on-Bio-Medical-Entities
+**Done by: R.B.RITHANYA BTech in Computer Science and Medical Engineering (1st year)**
 
 ## What is a Knowledge Graph?
 A Knowledge graph, also known as a semantic network, represents a network of real-world entities—i.e. objects, events or concepts—and illustrates the relationship between them.
