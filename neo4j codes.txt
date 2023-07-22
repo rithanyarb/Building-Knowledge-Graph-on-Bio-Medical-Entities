@@ -1,0 +1,43 @@
+MATCH (N) RETURN (N)
+
+MATCH (disease:DISEASE) 
+WHERE disease.type = "Inflammatory bowel disease" 
+RETURN disease
+
+MATCH (disease:DISEASE), (treatment:TREATMENT) 
+WHERE treatment.name = "Corticosteroids" 
+RETURN disease, treatment
+
+MATCH (disease:DISEASE), (treatment:TREATMENT), (chemical:CHEMICAL) 
+WHERE disease.type = "lungs" 
+RETURN disease, treatment, chemical
+
+MATCH (disease:DISEASE) -[:MEDICINES]-> (chemical:CHEMICAL) 
+WHERE chemical.name = "Prednisone" 
+RETURN disease, chemical
+
+MATCH (disease:DISEASE) -[:MEDICINES]-> (chemical:CHEMICAL) 
+WHERE chemical.name = "Prednisone" OR chemical.name = "Pembrolizumab"  
+RETURN disease, chemical
+
+MATCH (disease:DISEASE) -[:MEDICINES]-> (chemical:CHEMICAL), (treatment:TREATMENT)
+WHERE chemical.name = "Prednisone" OR chemical.name = "Pembrolizumab"  
+RETURN disease, chemical, treatment
+
+MATCH (treatment:TREATMENT) -[:CURES]-> (disease:DISEASE) 
+RETURN disease.name, COUNT(treatment.name)
+
+MATCH (treatment:TREATMENT) -[:CURES]-> (disease:DISEASE) 
+RETURN disease.name, COUNT(treatment.name) AS tn ORDER BY tn DESC LIMIT 1
+
+MATCH (chemical:CHEMICAL) -[:TREATS]-> (treament:TREATMENT) -[:CURES]-> (disease:DISEASE) 
+WHERE chemical.name = "Pembrolizumab" 
+RETURN disease.name, COUNT(treament.name) AS tn ORDER BY tn DESC
+
+
+CREATING..... PHOTO....
+
+
+DELETE ALL
+MATCH (n)
+DETACH DELETE n
